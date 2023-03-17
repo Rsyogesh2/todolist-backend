@@ -30,7 +30,7 @@ module.exports.updateToDo = async (req,res) => {
 module.exports.deleteToDo = async (req,res)=>{
     const {_id } = req.body 
 
-    await ToDoModel.findByIdAndDelete({id:_id})
+    await ToDoModel.deleteOne({id:_id})
 
     // res.send("success")
 }
